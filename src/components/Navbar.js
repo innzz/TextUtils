@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+
+
 export default function Navbar(props) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -27,12 +29,6 @@ export default function Navbar(props) {
   </nav>
   )
 }
-
-let homeButton = document.getElementById('home');
-homeButton.addEventListener('click',(e)=>{
-  e.preventDefault();
-  console.log("clicked home");
-});
 
 Navbar.propTypes = {
   title: PropTypes.string,
