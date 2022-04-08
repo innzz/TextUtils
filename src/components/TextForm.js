@@ -35,13 +35,16 @@ export default function TextForm(props) {
 
 
   const toUpCase = ()=>{
+      props.showAlert('your text converted to upper case','success');
       let newText = text.toUpperCase();
       setText(newText);
     }
 
   const toLowCase = ()=>{
-      let newText = text.toLowerCase();
-      setText(newText);
+    props.showAlert('your text converted to lower case','success');
+    let newText = text.toLowerCase();
+    setText(newText);
+
     }
 
   const onChangeFunc = (event)=>{
@@ -49,6 +52,7 @@ export default function TextForm(props) {
     }
 
   const clearAll = ()=>{
+    props.showAlert('All text cleared','success');
       let newText = '';
       setText(newText);
     }
