@@ -66,14 +66,14 @@ export default function TextForm(props) {
   return (
     <>
     <div className='container my-5'>
-        <h1>{props.heading}</h1>
-      <textarea id="textArea" className="form-control" value={ text } onChange={onChangeFunc} aria-label="With textarea"></textarea>
+        <h1 style={{color:`${props.mode==='light'?'black':'white'}`}}>{props.heading}</h1>
+      <textarea id="textArea" className="form-control" value={ text } onChange={onChangeFunc} aria-label="With textarea" style={{color:`${props.mode==='light'?'black':'white'}`,backgroundColor:`${props.mode==='light'?'white':'#52535a'}`}}></textarea>
       <div id="alert"></div>
       <button className="btn btn-primary my-3 mx-3" onClick={toUpCase}>convert to UPPERCASE</button>
       <button className="btn btn-primary my-3 mx-3" onClick={toLowCase}>CONVERT to lowercase</button>
       <button className="btn btn-primary my-3 mx-3" onClick={clearAll}>Clear text</button>
     <div className="dropdown mx-3">
-      <a className="btn btn-secondary dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+      <a className="btn btn-secondary dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style={{color:`${props.mode==='light'?'black':'white'}`}}>
         Change font style
       </a>
 
@@ -83,12 +83,14 @@ export default function TextForm(props) {
       </ul>
     </div>
    </div>
-    <div className="container">
+    <div className="container" style={{color:`${props.mode==='light'?'black':'white'}`}}>
       <h2>Your text summary</h2>
       <p>{wordsLen(text)} words and {lettersLen(text).char} characters and {lettersLen(text).emptySpace} spaces.</p>
       <p>{0.125 * wordsLen(text)} minutes will take to read this.</p>
       <h3>Preview</h3>
+      <div className="container">
       <p id="preview" >{text}</p>
+      </div>
     </div>
     </>
   )
