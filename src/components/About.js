@@ -1,38 +1,11 @@
 import React from 'react'
-// import { useState } from 'react'
 
 export default function About(props) {
-    // const [Mode,SetMode] = useState({
-    //     color: 'black',
-    //     backgroundColor: 'white'
-    // });
 
-    // const [ModeText,SetModeText] = useState('Enable Dark Mode');
-
-    // const toggleMode = ()=>{
-    //     if (Mode.color === 'black') {
-    //         SetMode({
-    //             color: 'white',
-    //             backgroundColor: 'black',
-    //             border: '1px solid grey'
-    //         })
-    //         SetModeText('Disable Dark Mode');
-    //     }
-    //     else{
-    //         SetMode({
-    //             color: 'black',
-    //             backgroundColor: 'white'
-    //         })
-    //         SetModeText('Enable Dark Mode');
-    //     }
-    // };
 
   return (
     <div className='container my-3' style={{color:`${props.mode==='light'?'black':'white'}`}} >
-        {/* <div className="form-check form-switch">
-          <input className="form-check-input" onClick={toggleMode}  type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-          <label className="form-check-label" >{ModeText}</label>
-        </div> */}
+
         <h1>About Us</h1>
             <div className="accordion" id="accordionExample" >
                 <div className="accordion-item" style={{backgroundColor:`${props.mode==='light'?'white':'black'}`}} >
